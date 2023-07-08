@@ -7,7 +7,7 @@
         $email = $_POST['username'];
         $password = $_POST['password'];
         $cpass = $_POST['cpassword'];
-        $regexPattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/";
+        // $regexPattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/";
 
         $select = "SELECT * FROM user_form WHERE email = '$email' && pass = '$password'";
 
@@ -20,9 +20,9 @@
                 $error[] = "Password does not match";
             }
 
-            else if(!preg_match_all($regexPattern, $password)){
-                $error[] = "Password must contain 1 upper, 1 lower, 1 number and 8+ character";
-            }
+            // else if(!preg_match_all($regexPattern, $password)){
+            //     $error[] = "Password must contain 1 upper, 1 lower, 1 number and 8+ character";
+            // }
 
             else{
                 $insert = "INSERT INTO user_form(email,pass) VALUES('$email','$password')";
