@@ -1,7 +1,7 @@
 <?php
 
 $databaseHost = "localhost";
-$databaseName = "logindb";
+$databaseName = "csrf_db";
 $databaseusername = "root";
 $databasepass = "";
 
