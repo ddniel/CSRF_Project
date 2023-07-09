@@ -41,26 +41,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
+    
+    <main>
+        <div class="card">
+            <form action="" method="post">
+                <h3>Register Now</h3>
+                
+                <?php
+                if(isset($error)){
+                    foreach($error as $error){
+                        echo '<span>'.$error .'</span>';
+                    }
+                }
+                ?>
 
-    <form action="" method="post">
-        <h3>Register Now: </h3>
-        
-        <?php
-        if(isset($error)){
-            foreach($error as $error){
-                echo '<span>'.$error .'</span>';
-            }
-        }
-        ?>
-
-        <input type="email" name="username" placeholder="Enter your email" require><br><br>
-        <input type="password" name="password" placeholder="Enter your password" require><br><br>
-        <input type="password" name="cpassword" placeholder="Confirm your password" require><br><br>
-        <input type="submit" value="Register" name="submit"><br><br>
-        <p>have an account? <a href="login_form.php">Login now</a> </p>
-    </form>
+                <input class="input" type="email" name="username" placeholder="Enter your email" require><br><br>
+                <input class="input" type="password" name="password" placeholder="Enter your password" require><br><br>
+                <input class="input" type="password" name="cpassword" placeholder="Confirm your password" require><br><br>
+                <input class="btn" type="submit" value="Register" name="submit"><br><br>
+                <p class="small-txt">Have an account? <a href="login_form.php">Login now</a> </p>
+            </form>
+        </div>
+    </main>
+    
     
 </body>
 </html>
