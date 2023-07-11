@@ -5,9 +5,12 @@ body{
     font-family: "Open Sans", sans-serif;
 }
 
+
+
 input{
     font-family: "Open Sans", sans-serif;
     width: 280px;
+    position: absolute;
 }
 
 main{
@@ -18,8 +21,6 @@ main{
     height: 100vh;
     background-color: aliceblue;
 }
-
-
 
 
 .card{
@@ -43,6 +44,8 @@ h3{
     border: solid 1px rgb(168, 168, 168) ;
 }
 
+
+
 .btn{
     width: 296px;
     padding: 10px 8px;
@@ -64,3 +67,9 @@ h3{
     font-weight: 400;
 }
 
+.sq{
+    width: 50px;
+    height: 30px;
+    background-color: black;
+    color: white;
+}

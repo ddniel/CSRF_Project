@@ -57,8 +57,8 @@
                     }
                 }
                 ?>
-
-                <input class="input" type="email" name="username" placeholder="Enter your email" require><br><br>
+                
+                <input class="input" type="email" name="username" placeholder="Enter your email" require><div class='sq'>hhhh</div></input><br><br>
                 <input class="input" type="password" name="password" placeholder="Enter your password" require><br><br>
                 <input class="input" type="password" name="cpassword" placeholder="Confirm your password" require><br><br>
                 <input class="btn" type="submit" value="Register" name="submit"><br><br>
