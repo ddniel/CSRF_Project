@@ -27,21 +27,34 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="./styles.css"/>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-    <form action="" method="post">
-        <h3>Loginpage</h3>
-        <?php
-        if(isset($error)){
-            foreach($error as $error){
-                echo '<span>'.$error .'</span>';
-            }
-        }
 
-        ?>
-         <input type="email" name="username" placeholder="enter your email" require><br><br>
-        <input type="password" name="password" placeholder="enter your password" require><br><br>
-        <input type="submit" value="login" name="submit"><br><br><br>
-        <p>DONT have an account ? <a href="register_form.php">Register  Now</a></p>
+    <main>
+        <div class="card">
+            <form action="" method="post">
+                <h3>Login</h3>
+                <?php
+                if(isset($error)){
+                    foreach($error as $error){
+                        echo '<span>'.$error .'</span>';
+                    }
+                }
+
+                ?>
+                <div class="input-container">
+                    <div class='sq'><i class='bx bxs-user'></i></div><input class="input-field" type="email" name="username" placeholder="Enter your email" require><br><br>
+                </div>
+                <div class="input-container">
+                    <div class='sq'><i class='bx bxs-lock-alt'></i></div><input class="input-field" type="password" name="password" placeholder="Enter your password" require><br><br>
+                </div>
+                <input class="btn" type="submit" value="login" name="submit"><br><br><br>
+                <p class="small-txt">Dont have an account ? <a href="register_form.php">Register  Now</a></p>
+            </form>
+        </div>
+    </main>
+    
     </body>
 </html>
