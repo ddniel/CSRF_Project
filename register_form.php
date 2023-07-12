@@ -41,7 +41,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" type="text/css" href="./styles.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     
@@ -58,15 +59,20 @@
                 }
                 ?>
                 
-                <input class="input" type="email" name="username" placeholder="Enter your email" require><div class='sq'>hhhh</div></input><br><br>
-                <input class="input" type="password" name="password" placeholder="Enter your password" require><br><br>
-                <input class="input" type="password" name="cpassword" placeholder="Confirm your password" require><br><br>
+                <div class="input-container">
+                    <div class='sq'><i class='bx bxs-user'></i></div><input class="input-field" type="email" name="username" placeholder="Enter your email" require><br><br>
+                </div>
+                <div class='input-container'>
+                    <div class='sq'><i class='bx bxs-lock-alt'></i></div><input class="input-field" type="password" name="password" placeholder="Enter your password" require><br><br>
+                </div>
+                <div class='input-container'>
+                    <div class='sq'><i class='bx bxs-check-circle'></i></div><input class="input-field" type="password" name="cpassword" placeholder="Confirm your password" require><br><br>
+                </div>
                 <input class="btn" type="submit" value="Register" name="submit"><br><br>
                 <p class="small-txt">Have an account? <a href="login_form.php">Login now</a> </p>
             </form>
         </div>
     </main>
-    
     
 </body>
 </html>
