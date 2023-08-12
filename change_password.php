@@ -11,7 +11,7 @@
         $cpass = $_POST['cpassword']; // Informacion del formulario
 
         // Verificar el token CSRF
-        
+
         // if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
         //     die("CSRF token verification failed. Possible CSRF attack.");
         // } else {
@@ -53,6 +53,7 @@
                     }
                 }
                 ?>
+
                 <!-- <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>"> -->
                 <div class="input-container">
                     <input class="input-field" type="password" name="password" placeholder="Enter your new password" require>
