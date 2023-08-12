@@ -10,17 +10,15 @@
         $password = $_POST['password']; // Informacion del formulario
         $cpass = $_POST['cpassword']; // Informacion del formulario
 
-
-        // $regexPattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/";
-
+        // Verificar el token CSRF
+        
+        // if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        //     die("CSRF token verification failed. Possible CSRF attack.");
+        // } else {
     
             if($password != $cpass){
                 $error[] = "Password does not match";
             }
-
-            // else if(!preg_match_all($regexPattern, $password)){
-            //     $error[] = "Password must contain 1 upper, 1 lower, 1 number and 8+ character";
-            // }
 
             else{
                 $update = "UPDATE user_form SET pass='$password' WHERE email='$email'";
@@ -28,6 +26,7 @@
                 echo "Password changed succesfully.";
                 // header('location:home.php');
             }
+        // }
 
    }
 ?>
@@ -51,6 +50,7 @@
             }
         }
         ?>
+        <!-- <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>"> -->
 
         <input type="password" name="password" placeholder="Enter your new password" require><br><br>
         <input type="password" name="cpassword" placeholder="Confirm your password" require><br><br>
