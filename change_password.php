@@ -39,23 +39,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <form action="" method="post">
-        <?php
-        if(isset($error)){
-            foreach($error as $error){
-                echo '<span>'.$error .'</span>';
-            }
-        }
-        ?>
-        <!-- <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>"> -->
-
-        <input type="password" name="password" placeholder="Enter your new password" require><br><br>
-        <input type="password" name="cpassword" placeholder="Confirm your password" require><br><br>
-        <input type="submit" value="Send" name="submit"><br><br>
-    </form>
+    <main>
+        <div class="card">
+            <h3>Change Password</h3>
+            <form action="" method="post">
+                <?php
+                if(isset($error)){
+                    foreach($error as $error){
+                        echo '<span>'.$error .'</span>';
+                    }
+                }
+                ?>
+                <!-- <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>"> -->
+                <div class="input-container">
+                    <input class="input-field" type="password" name="password" placeholder="Enter your new password" require>
+                </div>
+                <div class="input-container">
+                    <input class="input-field" type="password" name="cpassword" placeholder="Confirm your password" require>
+                </div>
+                
+                <input class="btn" type="submit" value="Send" name="submit"><br><br>
+            </form>
+        </div>
+    </main>
     
 </body>
 </html>
